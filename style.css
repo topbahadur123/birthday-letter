@@ -1,0 +1,178 @@
+/* Full Page Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffe3ec 0%, #ffb6c1 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    padding: 15px;
+}
+
+/* Dynamic Background Canvas */
+#heartCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Responsive Main Box */
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    max-width: 450px; /* Mobile friendly */
+}
+
+/* Neon Glowing Header text */
+.glowing-text {
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 0 0 10px #ff4a75, 0 0 20px #ff4a75, 0 0 30px #ff85a2;
+    margin-bottom: 25px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff4a75, 0 0 20px #ff4a75; }
+    to { text-shadow: 0 0 20px #ff1f53, 0 0 30px #ff1f53; }
+}
+
+/* Elegant Romantic Card */
+.letter-box {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    padding: 30px 20px;
+    box-shadow: 0 15px 35px rgba(255, 74, 117, 0.2);
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+}
+
+.letter-box:hover {
+    transform: scale(1.03);
+}
+
+/* Envelope Graphics */
+.envelope {
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+.heart-seal {
+    font-size: 5.5rem;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+}
+
+.click-hint {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #ff4a75;
+    font-weight: 600;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Internal Hidden Message Styling */
+.message-content {
+    display: none;
+    text-align: left;
+    color: #4a4a4a;
+    animation: openSpread 0.8s ease forwards;
+}
+
+.letter-title {
+    color: #d11a47;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.letter-p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.text-highlight {
+    font-weight: 600;
+    color: #ff2a5f;
+    background: rgba(255, 227, 236, 0.5);
+    padding: 5px 8px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Beautiful Signature Alignment */
+.signature {
+    margin-top: 25px;
+    text-align: right;
+    font-style: italic;
+    color: #666;
+}
+
+.sender-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff1f53;
+    margin-top: 5px;
+}
+
+@keyframes openSpread {
+    from { opacity: 0; transform: scale(0.9) translateY(30px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Interactive Exploding Magic Button */
+.action-btn {
+    margin-top: 25px;
+    background: linear-gradient(45deg, #ff4a75, #ff85a2);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(255, 74, 117, 0.4);
+    transition: all 0.2s ease;
+    width: 85%;
+}
+
+.action-btn:active {
+    transform: scale(0.93);
+}
+
+/* Floating Particle Hearts (JS magic) */
+.click-heart {
+    position: absolute;
+    font-size: 1.6rem;
+    pointer-events: none;
+    animation: burst 1.2s ease-out forwards;
+    z-index: 999;
+}
+
+@keyframes burst {
+    0% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+    100% { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
+}

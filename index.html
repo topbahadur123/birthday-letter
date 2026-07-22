@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love! 🎂💖</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font for Beautiful Nepali Text -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Floating Background Hearts -->
+    <canvas id="heartCanvas"></canvas>
+
+    <!-- Background Romantic Music (सच्याएको नाम music.mp3) -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="container">
+        <!-- Glowing Birthday Header -->
+        <h1 class="glowing-text">जन्मदिनको शुभकामना! 🎂✨</h1>
+
+        <!-- Interactive Love Letter Box -->
+        <div class="letter-box" id="letterBox" onclick="openLetter(event)">
+            <!-- Envelope View (Before Clicking) -->
+            <div class="envelope" id="envelopeView">
+                <div class="heart-seal">💌</div>
+                <p class="click-hint">पत्र खोल्न यहाँ थिच्नुहोस् ✨</p>
+            </div>
+
+            <!-- Real Letter Content (After Clicking) -->
+            <div class="message-content" id="messageContent">
+                <h2 class="letter-title">मेरी प्रिय मायालु ❤️,</h2>
+                
+                <p class="letter-p text-highlight">जन्मदिनको धेरै धेरै शुभकामना! 🎂🎉</p>
+                
+                <p class="letter-p">आज तिमी मबाट टाढा छौ, तर मेरो मनको सबैभन्दा नजिक तिमी नै छौ। दूरीले हामीलाई अलग राखेको होला, तर मेरो माया कहिल्यै कम भएको छैन। हरेक दिन तिम्रो सम्झनाले मलाई मुस्कुराउन सिकाउँछ र तिमीसँग बिताउने सुन्दर दिनहरूको आशा जगाइरहन्छ।</p>
+                
+                <p class="letter-p">मेरो एउटै चाहना छ—तिमी सधैं स्वस्थ, खुसी र सफल रहोस्। एक दिन यो दूरी पनि सकिनेछ, अनि फेरि तिम्रो हात समातेर हरेक जन्मदिन सँगै मनाउनेछौं।</p>
+                
+                <p class="letter-p text-highlight">आजको यो विशेष दिनमा फेरि एकपटक, जन्मदिनको धेरै धेरै शुभकामना, मेरो kale 🎂❤️</p>
+                
+                <div class="signature">
+                    <p>Forever Yours,</p>
+                    <p class="sender-name">TO BAHADUR KHADKA 🫀</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Music and Heart Explosion Button -->
+        <button class="action-btn" onclick="playMusicAndEffects(event)">गीत र जादु सुरु गर्नुहोस ❤️</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
